@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Recognition System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #12002f, #1c003a);
+      color: #8efeff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(142, 254, 255, 0.08);
+      border: 1px solid #8efeff;
+      padding: 40px 50px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px #8efeff;
+      width: 500px;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { box-shadow: 0 0 15px #8efeff; }
+      to   { box-shadow: 0 0 30px #8efeff; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #8efeff;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background: #8efeff;
+      color: #1c003a;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #c9ffff;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .glow-bar {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, #8efeff, transparent);
+      animation: glide 2.5s linear infinite;
+      top: 0;
+    }
+
+    @keyframes glide {
+      from { top: 0; }
+      to   { top: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bar"></div>
+  <div class="container">
+    <h1>Face Recognition Control Center</h1>
+    <div class="grid">
+      <a href="/video_feed/" class="btn">🔍 Start Recognition</a>
+      <a href="/enroll/" class="btn">🧑‍💻 Enroll New Face</a>
+    </div>
+  </div>
+</body>
+</html>

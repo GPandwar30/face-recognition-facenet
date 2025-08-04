@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Enrollment - Sci-Fi Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+      color: #00ffe7;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .neon-panel {
+      background: rgba(0, 255, 231, 0.1);
+      border: 1px solid #00ffe7;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe7;
+      width: 400px;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { box-shadow: 0 0 15px #00ffe7; }
+      to   { box-shadow: 0 0 25px #00ffe7; }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #00ffe7;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background: transparent;
+      border: 2px solid #00ffe7;
+      border-radius: 6px;
+      color: #00ffe7;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #00ffe7;
+      color: #0f0f1a;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background: #1ffff2;
+    }
+
+    .glow-line {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #00ffe7, transparent);
+      animation: scan 2s linear infinite;
+      top: 0;
+    }
+
+    @keyframes scan {
+      from { top: 0; }
+      to   { top: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-line"></div>
+  <form method="post" class="neon-panel">
+    {% csrf_token %}
+    <h2>Enroll Your Face</h2>
+    <input type="text" name="username" placeholder="Enter your name" required>
+    <input type="submit" value="Start Enrollment">
+  </form>
+</body>
+</html>

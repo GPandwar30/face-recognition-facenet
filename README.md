@@ -143,7 +143,7 @@ The system combines **classical and deep learning components**:
 ## 👨‍💻 Author
 
 **Gaurav Pandwar**  
-📧 [gauravpandwar@gmail.com](mailto:gp3084@gmail.com)  
+📧 [Email Me](mailto:gp3084@gmail.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/gp30) | [GitHub](https://github.com/GPandwar30/face-recognition-facenet/)
 
 ---
